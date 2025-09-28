@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>QUIPUX - Administración de Estudiantes - Ver</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
+        <link rel="stylesheet" href="assets/css/style.css" /> 
+        
+        <link rel="stylesheet" href="css/all.min.css" />
+    </head>
+    
+    <body class="is-preload">
+
+        <div id="page-wrapper"> 
+            
+            <section id="sidebar">
+                <div class="inner">
+                    <div class="logo-user" style="text-align: center; margin-bottom: 2em;">
+                        <i class="fa-solid fa-user-circle fa-4x"></i>
+                        <p style="margin-top: 0.5em; font-weight: bold; color: white;">Administrador</p>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="active"><i class="fa-solid fa-users"></i> Estudiantes</a></li>
+                            <li><a href="grupos.html"><i class="fa-solid fa-folder-open"></i> Grupos</a></li>
+                            <li><a href="materias.html"><i class="fa-solid fa-book"></i> Materias</a></li> 
+                            <li><a href="evaluaciones.html"><i class="fa-solid fa-clipboard-list"></i> Evaluaciones</a></li> 
+                            <li><a href="informes.html"><i class="fa-solid fa-chart-bar"></i> Informes</a></li> 
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+        <div id="wrapper">
+
+            <section id="main" class="wrapper style1">
+                <div class="inner">
+                    <h1 class="major">Información del Estudiante</h1>
+
+                    <section>
+                        <h2>Información Básica</h2>
+                        <form method="post" action="#">
+                            <div class="row gtr-uniform">
+                                
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="codigo">Código</label>
+                                    <input type="text" name="codigo" id="codigo" value="00123" disabled /> 
+                                </div>
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="identificacion">Identificación</label>
+                                    <input type="text" name="identificacion" id="identificacion" value="1000203040" />
+                                </div>
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="estado">Estado</label>
+                                    <select name="estado" id="estado">
+                                        <option value="activo">Activo</option>
+                                        <option value="inactivo">Inactivo</option>
+                                    </select>
+                                </div>
+
+								 <div class="col-4 col-12-xsmall">
+                                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" value="2005-08-15" />
+                                </div>
+
+                                <div class="col-6 col-12-xsmall">
+                                    <label for="nombres">Nombres</label>
+                                    <input type="text" name="nombres" id="nombres" value="Carolina" />
+                                </div>
+                                <div class="col-6 col-12-xsmall">
+                                    <label for="apellidos">Apellidos</label>
+                                    <input type="text" name="apellidos" id="apellidos" value="Fernández Echeverry" />
+                                </div>
+
+                                <div class="col-6 col-12-xsmall">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="text" name="telefono" id="telefono" value="300 123 4567" placeholder="Ej. 300 123 4567" />
+                                </div>
+                                <div class="col-6 col-12-xsmall">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" value="caro.fdez@colegio.edu" placeholder="Ej. correo@ejemplo.com" />
+                                </div>
+                                
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="sexo">Sexo</label>
+                                    <select name="sexo" id="sexo">
+                                        <option value="femenino">Femenino</option>
+                                        <option value="masculino">Masculino</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="grado_actual">Grado Actual</label>
+                                    <input type="text" name="grado_actual" id="grado_actual" value="4°" disabled />
+                                </div>
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="grupo_actual">Grupo Actual</label>
+                                    <input type="text" name="grupo_actual" id="grupo_actual" value="A" disabled />
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="direccion">Dirección</label>
+                                    <input type="text" name="direccion" id="direccion" value="Carrera 10 # 20 - 30" placeholder="Ej. Calle 1 # 2 - 3" />
+                                </div>
+
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <a href="#" class="button primary"><i class="fa-solid fa-save"></i> Guardar Cambios</a>
+										<a href="#" class="button"><i class="fa-solid fa-undo-alt"></i> Deshacer Cambios</a>
+                                        <a href="confirma_eliminacion.html" class="button"><i class="fa-solid fa-trash-alt"></i> Eliminar Estudiante</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
+                    <hr />
+
+                    <section>
+                        <h2>Cursos Realizados</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Periodo</th>
+                                        <th>Materia</th>
+                                        <th>Calificación</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2024-1</td>
+                                        <td>Matemáticas</td>
+                                        <td>4.5</td>
+                                        <td style="color: green; font-weight: bold;">Aprobado</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-1</td>
+                                        <td>Lenguaje</td>
+                                        <td>3.8</td>
+                                        <td style="color: green; font-weight: bold;">Aprobado</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-2</td>
+                                        <td>Ciencias Sociales</td>
+                                        <td>2.9</td>
+                                        <td style="color: red; font-weight: bold;">Reprobado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+
+        </div>
+
+        <footer id="footer" class="wrapper alt">
+            <div class="inner">
+                <ul class="menu">
+                    <a>&copy; QUIPUX. Todos los derechos reservados.<br>Diseño: Jimy Vargas</a>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/scripts.js"></script>
+
+    </body>
+</html>

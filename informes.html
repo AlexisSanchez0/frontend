@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>QUIPUX - Administración de Informes</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
+        <link rel="stylesheet" href="assets/css/style.css" /> 
+        
+        <link rel="stylesheet" href="css/all.min.css" />
+    </head>
+    
+    <body class="is-preload">
+
+        <div id="page-wrapper"> 
+            
+            <section id="sidebar">
+                <div class="inner">
+                    <div class="logo-user" style="text-align: center; margin-bottom: 2em;">
+                        <i class="fa-solid fa-user-circle fa-4x"></i>
+                        <p style="margin-top: 0.5em; font-weight: bold; color: white;">Administrador</p>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="index.html"><i class="fa-solid fa-users"></i> Estudiantes</a></li>
+                            <li><a href="grupos.html"><i class="fa-solid fa-folder-open"></i> Grupos</a></li>
+                            <li><a href="materias.html"><i class="fa-solid fa-book"></i> Materias</a></li> 
+                            <li><a href="evaluaciones.html"><i class="fa-solid fa-clipboard-list"></i> Evaluaciones</a></li> 
+                            <li><a href="informes.html" class="active"><i class="fa-solid fa-chart-bar"></i> Informes</a></li> 
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+        <div id="wrapper">
+
+            <section id="main" class="wrapper style1 fade-up">
+                <div class="inner">
+                    <h1 class="major">Generación de Informes</h1>
+                    
+                    <section>
+                        <h2>Parámetros del Informe</h2>
+                        <form method="post" action="#">
+                            <div class="row gtr-uniform">
+                                
+                                <div class="col-6 col-12-xsmall">
+                                    <label for="tipo_informe">Tipo de Informe</label>
+                                    <select name="tipo_informe" id="tipo_informe">
+                                        <option value="">- Seleccione Tipo -</option>
+                                        <option value="rendimiento">Rendimiento Académico por Grado</option>
+                                        <option value="asistencia">Reporte de Asistencia</option>
+                                        <option value="grupal">Desempeño Grupal</option>
+                                        <option value="individual">Certificado Individual</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-6 col-12-xsmall">
+                                    <label for="informe_grado">Grado / Grupo</label>
+                                    <select name="informe_grado" id="informe_grado">
+                                        <option value="">- Seleccione Grado o Grupo -</option>
+                                        <option value="4a">4° A</option>
+                                        <option value="4b">4° B</option>
+                                        <option value="todos">Todos los Grados</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <a href="#" class="button primary"><i class="fa-solid fa-file-alt"></i> Generar Informe</a>
+                                        <br><a href="#" class="button primary"><i class="fa-solid fa-history"></i> Ver Informes Históricos</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
+                    <hr />
+                    
+                    <section>
+                        <h2>Informes Sugeridos (Acceso Rápido)</h2>
+                        <div class="box">
+                            <ul class="alt">
+                                <li><a href="#">📋 Informe de Notas Trimestral (4° A)</a></li>
+                                <li><a href="#">📊 Gráfica de Asistencia General (Todos)</a></li>
+                                <li><a href="#">📄 Listado de Estudiantes Inactivos</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+
+        </div>
+
+        <footer id="footer" class="wrapper style1-alt">
+                <div class="inner">
+                    <ul class="menu">
+                        <a>&copy; QUIPUX. Todos los derechos reservados.<br>Diseño: Jimy Vargas</a>
+                    </ul>
+                </div>
+            </footer>
+
+        <script src="assets/js/scripts.js"></script>
+
+    </body>
+</html>

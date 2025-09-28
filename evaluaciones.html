@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>QUIPUX - Administración de Evaluaciones</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
+        <link rel="stylesheet" href="assets/css/style.css" /> 
+        
+        <link rel="stylesheet" href="css/all.min.css" />
+    </head>
+    
+    <body class="is-preload">
+
+        <div id="page-wrapper"> 
+            
+            <section id="sidebar">
+                <div class="inner">
+                    <div class="logo-user" style="text-align: center; margin-bottom: 2em;">
+                        <i class="fa-solid fa-user-circle fa-4x"></i>
+                        <p style="margin-top: 0.5em; font-weight: bold; color: white;">Administrador</p>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="index.html"><i class="fa-solid fa-users"></i> Estudiantes</a></li>
+                            <li><a href="grupos.html"><i class="fa-solid fa-folder-open"></i> Grupos</a></li>
+                            <li><a href="materias.html"><i class="fa-solid fa-book"></i> Materias</a></li> 
+                            <li><a href="evaluaciones.html" class="active"><i class="fa-solid fa-clipboard-list"></i> Evaluaciones</a></li> 
+                            <li><a href="informes.html"><i class="fa-solid fa-chart-bar"></i> Informes</a></li> 
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+        <div id="wrapper">
+
+            <section id="main" class="wrapper style1 fade-up">
+                <div class="inner">
+                    <h1 class="major">Administración de Evaluaciones</h1>
+                    
+                    <section>
+                        <h2>Crear / Buscar Evaluación</h2>
+                        <form method="post" action="#">
+                            <div class="row gtr-uniform">
+                                
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="eval_materia">Materia</label>
+                                    <select name="eval_materia" id="eval_materia">
+                                        <option value="">- Seleccione Materia -</option>
+                                        <option value="matematicas">Matemáticas</option>
+                                        <option value="lenguaje">Lenguaje</option>
+                                        <option value="ciencias">Ciencias Naturales</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-4 col-12-xsmall">
+                                    <label for="eval_grupo">Grupo</label>
+                                    <select name="eval_grupo" id="eval_grupo">
+                                        <option value="">- Seleccione Grupo -</option>
+                                        <option value="4a">4° A</option>
+                                        <option value="4b">4° B</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <a href="#" class="button primary"><i class="fa-solid fa-search"></i> Buscar Evaluaciones</a>
+                                        <br><a href="#" class="button primary"><i class="fa-solid fa-plus-circle"></i> Nueva Evaluación</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
+                    <hr />
+                    
+                    <section>
+                        <h2>Evaluaciones Pendientes</h2>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Descripción</th>
+                                        <th>Materia</th>
+                                        <th>Grupo</th>
+                                        <th>Fecha</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>E001</td>
+                                        <td>Quiz #1: Fracciones</td>
+                                        <td>Matemáticas</td>
+                                        <td>4° A</td>
+                                        <td>2025-05-15</td>
+                                        <td><a href="#" class="button primary"><i class="fa-solid fa-check-circle"></i> Calificar</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>E002</td>
+                                        <td>Examen Final: Cuento Corto</td>
+                                        <td>Lenguaje</td>
+                                        <td>4° A</td>
+                                        <td>2025-06-01</td>
+                                        <td><a href="#" class="button primary"><i class="fa-solid fa-file-invoice"></i> Detalle</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>E003</td>
+                                        <td>Proyecto de Investigación</td>
+                                        <td>Ciencias Naturales</td>
+                                        <td>4° B</td>
+                                        <td>2025-05-20</td>
+                                        <td><a href="#" class="button primary"><i class="fa-solid fa-check-circle"></i> Calificar</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+
+        </div>
+
+        <footer id="footer" class="wrapper style1-alt">
+            <div class="inner">
+                <ul class="menu">
+                    <a>&copy; QUIPUX. Todos los derechos reservados.<br>Diseño: Jimy Vargas</a>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/scripts.js"></script>
+
+    </body>
+</html>

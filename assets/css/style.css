@@ -1,0 +1,272 @@
+/*  VARIABLES DE COLOR Y TIPOGRAFÍA */
+:root {
+    --color-primary: #454049; 
+    --color-accent: #00CED1; 
+    --color-secondary: #2C3E50; 
+    --color-terciary:#ffc1cb ;
+    --color-light: #F4F4F9; 
+    --color-white: #FFFFFF;
+    --color-border: #DDE1E6;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/*  RESET, TIPOGRAFÍA Y SCROLL */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, strong, table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+html { scroll-behavior: smooth; }
+body {
+    -ms-overflow-style: scrollbar;
+    background-color: var(--color-light); 
+    color: var(--color-secondary);
+    font-family: var(--font-family);
+    line-height: 1.65;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+/* Estilo para el ícono principal */
+.logo-user i.fa-solid {
+    color: var(--color-accent);
+}
+
+
+
+
+/* Estado de Precarga */
+body.is-preload { opacity: 0; }
+
+h1.major, h2 {
+    margin: 0 0 1em 0;
+    color: var(--color-primary);
+    font-weight: 800;
+    line-height: 1.25;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.5em;
+}
+
+
+
+
+/* LAYOUT PRINCIPAL (SIDEBAR Y WRAPPER) */
+#wrapper {
+    margin-left: 17em; 
+    padding: 1.5em; 
+    transition: margin-left 0.3s ease-in-out;
+    min-height: 100vh;
+}
+
+#sidebar {
+    background-color: var(--color-primary); 
+    color: var(--color-white);
+    height: 100vh;
+    left: 0;
+    padding: 1.5em 0; 
+    position: fixed;
+    top: 0;
+    width: 17em;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar .inner {
+    padding: 1.5em;
+    width: 100%;
+}
+
+
+
+
+/* Navegación del Sidebar */
+#sidebar nav ul { list-style: none; padding: 0; margin: 0; }
+#sidebar nav ul li a {
+    border-radius: 6px;
+    color: var(--color-light);
+    display: block;
+    line-height: 3em; 
+    text-decoration: none;
+    padding: 0 1em;
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: 500;
+}
+#sidebar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+#sidebar nav ul li a.active {
+    background-color: var(--color-accent);
+    color: var(--color-primary); 
+    font-weight: bold;
+}
+
+
+
+
+/* ADAPTACIÓN DE SECCIONES */
+section#main.wrapper {
+    background-color: var(--color-white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+    border-radius: 8px;
+    margin-bottom: 2em;
+    padding: 0; 
+}
+
+
+section#main .inner {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 75em;
+    padding: 2em; 
+}
+
+
+
+
+/* Botones */
+.button {
+    background-color: var(--color-terciary);
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    color: var(--color-secondary) !important;
+    height: 2.8em; 
+    line-height: 2.6em;
+    padding: 0 1.2em;
+    font-weight: 600;
+    text-transform: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.button:hover {
+    background-color: #eba2a2; 
+    border-color: black;
+}
+.button.primary {
+    background-color: var(--color-accent); 
+    border-color: var(--color-accent);
+    color: var(--color-secondary) !important;
+    font-weight: 700;
+}
+.button.primary:hover {
+    background-color: #00B3B6; 
+    border-color: black;
+}
+
+
+
+
+/* Campos de Formulario */
+input[type="text"], input[type="email"], select, textarea {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    color: var(--color-secondary);
+    height: 2.8em;
+    padding: 0 0.8em;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent);
+}
+textarea { height: auto; padding: 0.8em; }
+
+label {
+    font-weight: 600;
+    margin: 0 0 0.4em 0;
+    font-size: 0.9em;
+    color: var(--color-secondary);
+}
+
+
+
+
+/* Tablas */
+.table-wrapper { overflow-x: auto; }
+table {
+    border-radius: 4px;
+    border: none;
+}
+table thead {
+    background-color: var(--color-primary); 
+    color: var(--color-white);
+}
+table th {
+    padding: 0.75em;
+    font-size: 0.9em;
+    border: none;
+    text-align: center;
+}
+table td {
+    padding: 0.75em;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+table tbody tr:nth-child(even) {
+    background-color: var(--color-light); 
+}
+table tbody tr:hover {
+    background-color: rgba(0, 206, 209, 0.1); 
+}
+
+
+
+
+/* Corrección de botones y footer */
+a.button, .actions a.button, .actions a.button:hover, .table-wrapper a.button, .table-wrapper a.button:hover {
+    border-bottom: none !important; 
+    text-decoration: none !important; 
+}
+            
+#footer {
+    clear: both !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 100;
+    margin-top: 3em !important; 
+    padding-left: 20em; 
+}
+             
+/* Nuevo espacio de los íconos */
+#sidebar nav ul li a i.fa-solid {
+    margin-right: 0.75em;
+    width: 1.25em; 
+    text-align: center;
+}
+
+
+
+
+/*  RESPONSIVIDAD (Móviles) */
+@media screen and (max-width: 980px) {
+    #wrapper { margin-left: 0; padding: 1em; } 
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; 
+        padding: 0.5em 0;
+    }
+    #sidebar nav ul { display: flex; flex-wrap: wrap; justify-content: center; }
+    #sidebar nav ul li a { line-height: 2em; padding: 0 0.5em; font-size: 0.8em; }
+    section#main .inner { padding: 1.5em 1em; }
+    
+    #footer {
+            padding-left: 0 !important; 
+            text-align: center; 
+        }
+}
+
+
+
+
+    

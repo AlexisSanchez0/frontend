@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>QUIPUX - Administración de Estudiantes</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        
+        <link rel="stylesheet" href="assets/css/style.css" /> 
+        
+        <link rel="stylesheet" href="css/all.min.css" />
+    </head>
+    
+    <body class="is-preload">
+
+        <div id="page-wrapper"> 
+            
+            <section id="sidebar">
+                <div class="inner">
+                    <div class="logo-user" style="text-align: center; margin-bottom: 2em;">
+                        <i class="fa-solid fa-user-circle fa-4x"></i>
+                        <p style="margin-top: 0.5em; font-weight: bold; color: white;">Administrador</p>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="active"><i class="fa-solid fa-users"></i> Estudiantes</a></li>
+                            <li><a href="grupos.html"><i class="fa-solid fa-folder-open"></i> Grupos</a></li>
+                            <li><a href="materias.html"><i class="fa-solid fa-book"></i> Materias</a></li> 
+                            <li><a href="evaluaciones.html"><i class="fa-solid fa-clipboard-list"></i> Evaluaciones</a></li> 
+                            <li><a href="informes.html"><i class="fa-solid fa-chart-bar"></i> Informes</a></li> 
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <div id="wrapper">
+
+                <section id="main" class="wrapper style1 fade-up">
+                    <div class="inner">
+                        <h1 class="major">Administración de Estudiantes</h1>
+
+                        <section>
+                            <h2>Filtros de Búsqueda</h2>
+                            <form method="post" action="#">
+                                <div class="row gtr-uniform">
+                                    
+                                    <div class="col-3 col-12-xsmall">
+                                        <label for="grado">Grado</label>
+                                        <select name="grado" id="grado">
+                                            <option value="">- Seleccione -</option>
+                                            <option value="1">1°</option>
+                                            <option value="2">2°</option>
+                                            <option value="3">3°</option>
+                                            <option value="4">4°</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-3 col-12-xsmall">
+                                        <label for="grupo">Grupo</label>
+                                        <select name="grupo" id="grupo">
+                                            <option value="">- Seleccione -</option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-3 col-12-xsmall">
+                                        <label for="identificacion">Identificación</label>
+                                        <input type="text" name="identificacion" id="identificacion" value="" placeholder="Ej. 1000203040" />
+                                    </div>
+
+                                    <div class="col-3 col-12-xsmall">
+                                        <label for="estudiante">Estudiante</label>
+                                        <input type="text" name="estudiante" id="estudiante" value="" placeholder="Ej. Juan Pérez" />
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <ul class="actions small">
+                                            <a href="#" class="button primary"><i class="fa-solid fa-search"></i> Buscar</a>
+                                            <a href="#" class="button"><i class="fa-solid fa-trash-restore"></i> Limpiar Filtros</a>
+                                            <a href="#" class="button primary"><i class="fa-solid fa-plus-circle"></i> Nuevo Estudiante</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                        
+                        <hr />
+
+                        <section>
+                            <h2>Listado de Estudiantes</h2>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Código</th>
+                                            <th>Identificación</th>
+                                            <th>Estudiante</th>
+                                            <th>Grado</th>
+                                            <th>Grupo</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>00123</td>
+                                            <td>1000203040</td>
+                                            <td>Carolina Fernández Echeverry</td>
+                                            <td>4°</td>
+                                            <td>A</td>
+                                            <td>Activo</td>
+                                             <td>
+                                                <ul class="actions small">
+                                                    <a href="detalles_estudiante.html" class="button primary"><i class="fa-solid fa-eye"></i> Ver</a>
+                                                    <br><a href="confirma_eliminacion.html" class="button"><i class="fa-solid fa-trash-alt"></i> Eliminar</a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>00456</td>
+                                            <td>1000506070</td>
+                                            <td>Martín López Giraldo</td>
+                                            <td>2°</td>
+                                            <td>B</td>
+                                            <td>Activo</td>
+                                             <td>
+                                                <ul class="actions small">
+                                                    <a href="detalles_estudiante.html" class="button primary"><i class="fa-solid fa-eye"></i> Ver</a>
+                                                    <br><a href="confirma_eliminacion.html" class="button"><i class="fa-solid fa-trash-alt"></i> Eliminar</a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>00789</td>
+                                            <td>1000809010</td>
+                                            <td>Valeria Soto Restrepo</td>
+                                            <td>4°</td>
+                                            <td>A</td>
+                                            <td>Inactivo</td>
+                                             <td>
+                                                <ul class="actions small">
+                                                    <a href="detalles_estudiante.html" class="button primary"><i class="fa-solid fa-eye"></i> Ver</a>
+                                                    <br><a href="confirma_eliminacion.html" class="button"><i class="fa-solid fa-trash-alt"></i> Eliminar</a>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5"></td>
+                                            <td>Total: 3</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+            </div> 
+            <footer id="footer" class="wrapper style1-alt">
+                <div class="inner">
+                    <ul class="menu">
+                        <a>&copy; QUIPUX. Todos los derechos reservados.<br>Diseño: Jimy Vargas</a>
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+        <script src="assets/js/scripts.js"></script>
+
+    </body>
+</html>
